@@ -1,8 +1,0 @@
-sudo: required
-services:
-    - docker
-
-script:
-    - docker build -t dvillaj/riak .
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker push dvillaj/riak
